@@ -20,15 +20,15 @@ var table = map[int]byte{
 }
 
 func Hash(str []byte) []byte {
-	raw := 274777
+	raw := uint64(274777)
 	hash := []byte{}
 
 	for i := 0; i < len(str); i++ {
-		raw = raw*int(str[i]) + 33
+		raw = raw*uint64(str[i]) + 33
 	}
 
 	for i := 0; i < 6; i++ {
-		rem := raw % 16
+		rem := int(raw % 16)
 		raw = raw / 16
 		hash = append(hash, table[rem])
 	}

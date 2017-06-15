@@ -18,6 +18,7 @@ Four nights will quickly dream away the time;
 And then the moon, like to a silver bow
 New-bent in heaven, shall behold the night
 Of our solemnities.`),
+		[]byte(`https:/google.com`),
 	}
 
 	for _, c := range tc {
